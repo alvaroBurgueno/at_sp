@@ -1,8 +1,17 @@
 package com.atos.springApp.model;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Person {
 
+	@NotNull
+	@Size(min=2, max=6)
 	private String name;
+	
+	@NotNull
+	@Min(18)
 	private int age;
 
 	public String getName() {
@@ -27,6 +36,13 @@ public class Person {
 		this.age = age;
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+
 	// Constructor por defecto porque 
 	// se inicializarán los campos sin datos
 	// en el controlador PostController
