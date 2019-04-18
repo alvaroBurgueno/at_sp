@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>FORM</title>
+</head>
+<body>
+<!--	resumen thymeleaf:
+		@ para enlances 		$ para objetos		* para campos de objetos -->
+
+<form action="#" th:action="@{/example3/addperson}" th:object="${person}" method="post">
+	<p><input type="text" th:field="*{name}" />  </p>
+	<p><input type="number" th:field="*{age}"/>  </p>
+	<p><input type="submit" value="Submit" />  </p>
+</form>
+</body>
+</html>

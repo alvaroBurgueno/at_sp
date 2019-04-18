@@ -5,6 +5,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Hola <span th:text="${name}"></span>, esto es un ejemplo de controlador de una vista</h1>
+	<table>
+		<thead>
+		<tr>
+			<th>NAME</th>
+			<th>AGE</th>
+		</tr>
+		</thead>
+		<tbody th:each="person : ${people}">
+		<tr>
+			<th th:text="${person.name}"></th>
+			<th th:text="${person.age}"></th>
+		</tr>
+		
+		</tbody>
+	</table>
+
+
 </body>
 </html>
